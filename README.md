@@ -17,10 +17,10 @@ Why write meaningful code when you can write **MORE** code?
 
 ### [`codemaxxed`](https://github.com/jshchnz/codemaxxed) — the proof
 
-![Lines of Code](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjshchnz%2Fcodemaxxed%2Fmain%2Fstats.json&query=%24.lines_fmt&label=lines%20of%20code&color=brightgreen&style=for-the-badge&suffix=%20and%20counting)
+<!-- LINES_BADGE -->![Lines of Code](https://img.shields.io/badge/lines%20of%20code-812%2C073%20and%20counting-brightgreen?style=for-the-badge)<!-- /LINES_BADGE -->
 
-![Files](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjshchnz%2Fcodemaxxed%2Fmain%2Fstats.json&query=%24.files_fmt&label=files&color=blue&style=for-the-badge)
-![Commits](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjshchnz%2Fcodemaxxed%2Fmain%2Fstats.json&query=%24.commits_fmt&label=commits&color=orange&style=for-the-badge)
+<!-- FILES_BADGE -->![Files](https://img.shields.io/badge/files-6%2C989-blue?style=for-the-badge)<!-- /FILES_BADGE -->
+<!-- COMMITS_BADGE -->![Commits](https://img.shields.io/badge/commits-70-orange?style=for-the-badge)<!-- /COMMITS_BADGE -->
 
 A repo that grows every 30 minutes via GitHub Actions. None of it does anything.
 
