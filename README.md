@@ -1,22 +1,32 @@
+<div align="center">
+
 # codemaxxing
 
 **Because quantity IS quality.**
 
-![Lines Generated](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjshchnz%2Fcodemaxxed%2Fmain%2Fstats.json&query=%24.lines&label=lines%20generated&color=brightgreen&suffix=%20and%20counting)
-![Build](https://img.shields.io/badge/build-passing%20(lying)-brightgreen)
-![Coverage](https://img.shields.io/badge/coverage-420%25-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![PRs](https://img.shields.io/badge/PRs-lol-orange)
-![Enterprise](https://img.shields.io/badge/enterprise-ready-purple)
-![Vibe Coded](https://img.shields.io/badge/vibe-coded-ff69b4)
+![Build](https://img.shields.io/badge/build-passing%20(lying)-brightgreen?style=flat-square)
+![Coverage](https://img.shields.io/badge/coverage-420%25-brightgreen?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
+![PRs](https://img.shields.io/badge/PRs-lol-orange?style=flat-square)
+![Enterprise](https://img.shields.io/badge/enterprise-ready-purple?style=flat-square)
+![Vibe Coded](https://img.shields.io/badge/vibe-coded-ff69b4?style=flat-square)
 
 The world's first AI-free, artisanally handcrafted, enterprise-grade code generation framework for maximizing your GitHub contribution graph.
 
 Why write meaningful code when you can write **MORE** code?
 
-## See it in action
+### [`codemaxxed`](https://github.com/jshchnz/codemaxxed) — the proof
 
-Want proof this works? Check out [**codemaxxed**](https://github.com/jshchnz/codemaxxed) — a repo that grows every 30 minutes via GitHub Actions. It started at 1M lines and never stopped. None of it does anything.
+![Lines of Code](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjshchnz%2Fcodemaxxed%2Fmain%2Fstats.json&query=%24.lines&label=lines%20of%20code&color=brightgreen&style=for-the-badge&suffix=%20and%20counting)
+
+![Files](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjshchnz%2Fcodemaxxed%2Fmain%2Fstats.json&query=%24.files&label=files&color=blue&style=for-the-badge)
+![Commits](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjshchnz%2Fcodemaxxed%2Fmain%2Fstats.json&query=%24.commits&label=commits&color=orange&style=for-the-badge)
+
+A repo that grows every 30 minutes via GitHub Actions. None of it does anything.
+
+</div>
+
+---
 
 ## Installation
 
