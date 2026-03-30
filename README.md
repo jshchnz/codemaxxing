@@ -4,10 +4,6 @@
 
 The world's first artisanally handcrafted, enterprise-grade slop generation framework for maximizing your GitHub contribution graph. _Because quantity is quality._
 
-![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
-![Coverage](https://img.shields.io/badge/coverage-420%25-brightgreen?style=flat-square)
-![Vibe Coded](https://img.shields.io/badge/vibe-coded-ff69b4?style=flat-square)
-
 Why write meaningful code when you can write pure, unadulterated slop?
 
 ### [`codemaxxed`](https://github.com/jshchnz/codemaxxed)
