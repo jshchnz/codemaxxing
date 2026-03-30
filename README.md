@@ -19,6 +19,7 @@ _a live repo being continuously codemaxxed_
 <img src="https://img.shields.io/badge/commits-674-orange?style=for-the-badge" alt="Commits">
 <!-- /COMMITS_BADGE -->
 
+
 Why write meaningful code when you can write pure, unadulterated slop?
 
 </div>
