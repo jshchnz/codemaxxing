@@ -2,7 +2,7 @@
 
 **Because quantity IS quality.**
 
-![Lines of Code](https://img.shields.io/badge/lines%20of%20code-∞-brightgreen)
+![Lines Generated](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjshchnz%2Fcodemaxxed%2Fmain%2Fstats.json&query=%24.lines&label=lines%20generated&color=brightgreen&suffix=%20and%20counting)
 ![Build](https://img.shields.io/badge/build-passing%20(lying)-brightgreen)
 ![Coverage](https://img.shields.io/badge/coverage-420%25-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
@@ -16,7 +16,7 @@ Why write meaningful code when you can write **MORE** code?
 
 ## See it in action
 
-Want proof this works? Check out [**codemaxxed**](https://github.com/jshchnz/codemaxxed) — a repo with over **1,000,000 lines of code** across **3,540 files** and **237 commits**, generated in **29 seconds**. None of it does anything.
+Want proof this works? Check out [**codemaxxed**](https://github.com/jshchnz/codemaxxed) — a repo that grows every 30 minutes via GitHub Actions. It started at 1M lines and never stopped. None of it does anything.
 
 ## Installation
 
