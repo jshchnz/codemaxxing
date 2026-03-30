@@ -4,11 +4,9 @@
 
 **Because quantity IS quality.**
 
+![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
 ![Build](https://img.shields.io/badge/build-passing%20(lying)-brightgreen?style=flat-square)
 ![Coverage](https://img.shields.io/badge/coverage-420%25-brightgreen?style=flat-square)
-![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
-![PRs](https://img.shields.io/badge/PRs-lol-orange?style=flat-square)
-![Enterprise](https://img.shields.io/badge/enterprise-ready-purple?style=flat-square)
 ![Vibe Coded](https://img.shields.io/badge/vibe-coded-ff69b4?style=flat-square)
 
 The world's first AI-free, artisanally handcrafted, enterprise-grade code generation framework for maximizing your GitHub contribution graph.
