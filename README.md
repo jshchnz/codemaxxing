@@ -2,7 +2,7 @@
 
 # codemaxxing
 
-**Because quantity IS quality.**
+**Because quantity is quality.**
 
 ![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
 ![Build](https://img.shields.io/badge/build-passing%20(lying)-brightgreen?style=flat-square)
@@ -11,7 +11,7 @@
 
 The world's first AI-free, artisanally handcrafted, enterprise-grade code generation framework for maximizing your GitHub contribution graph.
 
-Why write meaningful code when you can write **MORE** code?
+Why write meaningful code when you can write more code?
 
 ### [`codemaxxed`](https://github.com/jshchnz/codemaxxed) — the proof
 
