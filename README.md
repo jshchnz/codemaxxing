@@ -4,8 +4,6 @@
 
 The world's first artisanally handcrafted, enterprise-grade slop generation CLI tool for maximizing your GitHub contribution graph. _Because quantity is quality._
 
-Why write meaningful code when you can write pure, unadulterated slop?
-
 ### [`codemaxxed`](https://github.com/jshchnz/codemaxxed) 
 
 _a live repo being continuously codemaxxed_
@@ -20,6 +18,8 @@ _a live repo being continuously codemaxxed_
 <!-- COMMITS_BADGE -->
 <img src="https://img.shields.io/badge/commits-674-orange?style=for-the-badge" alt="Commits">
 <!-- /COMMITS_BADGE -->
+
+Why write meaningful code when you can write pure, unadulterated slop?
 
 </div>
 
