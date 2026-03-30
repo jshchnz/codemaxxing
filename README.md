@@ -13,7 +13,7 @@ The world's first artisanally handcrafted, enterprise-grade slop generation fram
 
 Why write meaningful code when you can write pure, unadulterated slop?
 
-### [`codemaxxed`](https://github.com/jshchnz/codemaxxed) — the proof
+### [`codemaxxed`](https://github.com/jshchnz/codemaxxed)
 
 <!-- LINES_BADGE -->
 <img src="https://img.shields.io/badge/lines%20of%20code-3%2C022%2C959-brightgreen?style=for-the-badge" alt="Lines of Code">
