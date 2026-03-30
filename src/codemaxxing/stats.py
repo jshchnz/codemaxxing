@@ -33,9 +33,9 @@ class Stats:
         e = self.elapsed / 60
         return self.total_commits / e if e > 0 else 0
 
-    def display(self) -> str:
+    def display(self, mode: str = "TURBO") -> str:
         return (
-            f"\r[TURBO] {self.total_lines:,} lines | "
+            f"\r[{mode}] {self.total_lines:,} lines | "
             f"{self.total_commits:,} commits | "
             f"{self.total_files:,} files | "
             f"{self.lines_per_sec:,.0f} lines/sec | "

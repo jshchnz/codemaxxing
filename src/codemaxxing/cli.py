@@ -1,5 +1,4 @@
 import argparse
-import sys
 
 from codemaxxing.config import GenerationConfig
 
@@ -14,7 +13,9 @@ def main():
             "  codemaxxing --lines 10000 --sanity 100\n"
             "  codemaxxing --lines 50000 --sanity 0 --lang java\n"
             "  codemaxxing --lines 100000 --turbo --sanity 50\n"
-            "  codemaxxing --lines 1000 --enterprise  # 10x multiplier = 10000 lines\n"
+            "  codemaxxing --lines 1000 --enterprise\n"
+            "  codemaxxing --turbo --forever --push-every 50 --batch-size 30\n"
+            "  codemaxxing --turbo --forever --branch main --push-every 100\n"
         ),
     )
 
@@ -38,11 +39,27 @@ def main():
     )
     parser.add_argument(
         "--turbo", action="store_true",
-        help="Turbo mode: generate -> git add -> commit -> repeat in a tight loop",
+        help="Turbo mode: generate -> git add -> commit -> repeat",
     )
     parser.add_argument(
         "--enterprise", action="store_true",
         help="Enterprise mode: 10x line multiplier because enterprise",
+    )
+    parser.add_argument(
+        "--batch-size", type=int, default=15,
+        help="Files per commit in turbo mode (default: 15, higher = more lines/commit)",
+    )
+    parser.add_argument(
+        "--push-every", type=int, default=0,
+        help="Auto-push every N commits (default: 0 = manual push)",
+    )
+    parser.add_argument(
+        "--forever", action="store_true",
+        help="Run indefinitely until interrupted (ignores --lines)",
+    )
+    parser.add_argument(
+        "--branch", type=str, default="",
+        help="Use this branch instead of creating slop/session-* (useful for CI)",
     )
 
     args = parser.parse_args()
@@ -54,6 +71,10 @@ def main():
         output_dir=args.output,
         turbo=args.turbo,
         enterprise=args.enterprise,
+        batch_size=args.batch_size,
+        push_every=args.push_every,
+        forever=args.forever,
+        branch=args.branch,
     )
 
     if config.turbo:
