@@ -26,8 +26,6 @@ Why write meaningful code when you can write pure, unadulterated slop?
 <img src="https://img.shields.io/badge/commits-73-orange?style=for-the-badge" alt="Commits">
 <!-- /COMMITS_BADGE -->
 
-A repo that grows every 30 minutes via GitHub Actions. None of it does anything.
-
 </div>
 
 ---
