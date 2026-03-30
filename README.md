@@ -6,7 +6,7 @@ The world's first artisanally handcrafted, enterprise-grade slop generation fram
 
 Why write meaningful code when you can write pure, unadulterated slop?
 
-### [`codemaxxed`](https://github.com/jshchnz/codemaxxed)
+### [`codemaxxed`](https://github.com/jshchnz/codemaxxed) — a live repo being continuously codemaxxed
 
 <!-- LINES_BADGE -->
 <img src="https://img.shields.io/badge/lines%20of%20code-4%2C027%2C800-brightgreen?style=for-the-badge" alt="Lines of Code">
@@ -26,7 +26,9 @@ Why write meaningful code when you can write pure, unadulterated slop?
 ## Installation
 
 ```bash
-pip install -e .
+git clone https://github.com/jshchnz/codemaxxing.git
+cd codemaxxing
+pip install .
 ```
 
 ## Quick Start
