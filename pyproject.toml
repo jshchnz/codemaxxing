@@ -1,0 +1,18 @@
+[project]
+name = "codemaxxing"
+version = "0.1.0"
+description = "Maximize your lines of code. Because quantity IS quality."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+codemaxxing = "codemaxxing.cli:main"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
