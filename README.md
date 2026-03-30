@@ -2,7 +2,7 @@
 
 # codemaxxing
 
-The world's first artisanally handcrafted, enterprise-grade slop generation framework for maximizing your GitHub contribution graph. **Because quantity is quality.**
+The world's first artisanally handcrafted, enterprise-grade slop generation framework for maximizing your GitHub contribution graph. _Because quantity is quality._
 
 ![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
 ![Build](https://img.shields.io/badge/build-passing%20(lying)-brightgreen?style=flat-square)
