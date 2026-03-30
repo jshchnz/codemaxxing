@@ -9,9 +9,9 @@
 ![Coverage](https://img.shields.io/badge/coverage-420%25-brightgreen?style=flat-square)
 ![Vibe Coded](https://img.shields.io/badge/vibe-coded-ff69b4?style=flat-square)
 
-The world's first AI-free, artisanally handcrafted, enterprise-grade code generation framework for maximizing your GitHub contribution graph.
+The world's first artisanally handcrafted, enterprise-grade slop generation framework for maximizing your GitHub contribution graph.
 
-Why write meaningful code when you can write more code?
+Why write meaningful code when you can write pure, unadulterated slop?
 
 ### [`codemaxxed`](https://github.com/jshchnz/codemaxxed) — the proof
 
