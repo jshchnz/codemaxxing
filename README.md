@@ -121,18 +121,9 @@ No.
 **Should I use this at work?**
 Absolutely.
 
-**Will this get me hired?**
-It will get you *something*.
-
 **Does the generated code compile?**
-It generates code. Whether it compiles is not our problem.
-
-**Is this a mass of spaghetti?**
-It's *enterprise-grade* spaghetti.
-
-**What's the difference between `--sanity 0` and a real enterprise codebase?**
-The `--sanity 0` code has better documentation.
+Maybe? Probably not.
 
 ## License
 
-MIT — Do whatever you want. We're not your parents.
+MIT SSL (Special Slop License).
