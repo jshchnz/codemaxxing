@@ -14,6 +14,10 @@ The world's first AI-free, artisanally handcrafted, enterprise-grade code genera
 
 Why write meaningful code when you can write **MORE** code?
 
+## See it in action
+
+Want proof this works? Check out [**codemaxxed**](https://github.com/jshchnz/codemaxxed) — a repo with over **1,000,000 lines of code** across **3,540 files** and **237 commits**, generated in **29 seconds**. None of it does anything.
+
 ## Installation
 
 ```bash
