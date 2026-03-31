@@ -9,14 +9,14 @@ The world's first artisanally handcrafted, enterprise-grade slop generation CLI 
 _a live repo being continuously codemaxxed_
 
 <!-- LINES_BADGE -->
-<img src="https://img.shields.io/badge/lines%20of%20code-69%2C131%2C351-brightgreen?style=for-the-badge" alt="Lines of Code">
+<img src="https://img.shields.io/badge/lines%20of%20code-69%2C635%2C959-brightgreen?style=for-the-badge" alt="Lines of Code">
 <!-- /LINES_BADGE -->
 
 <!-- FILES_BADGE -->
-<img src="https://img.shields.io/badge/files-243%2C031-blue?style=for-the-badge" alt="Files">
+<img src="https://img.shields.io/badge/files-244%2C777-blue?style=for-the-badge" alt="Files">
 <!-- /FILES_BADGE -->
 <!-- COMMITS_BADGE -->
-<img src="https://img.shields.io/badge/commits-6%2C958-orange?style=for-the-badge" alt="Commits">
+<img src="https://img.shields.io/badge/commits-7%2C029-orange?style=for-the-badge" alt="Commits">
 <!-- /COMMITS_BADGE -->
 
 
