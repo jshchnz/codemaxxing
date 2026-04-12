@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Guide to Contemporary Architecture</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Global Guide to Contemporary Architecture</h1>
+        <p>An interactive, comprehensive database of modern architectural marvels.</p>
+    </header>
+    <div id="app">
+        <aside id="sidebar">
+            <h2>Filters</h2>
+            <div>
+                <label>Style:</label>
+                <select id="style-filter">
+                    <option value="">All</option>
+                    <option value="Deconstructivism">Deconstructivism</option>
+                    <option value="High-Tech">High-Tech</option>
+                    <option value="Postmodernism">Postmodernism</option>
+                    <option value="Brutalism">Brutalism</option>
+                    <option value="Sustainable">Sustainable</option>
+                </select>
+            </div>
+            <!-- More filters could go here -->
+            <p>Displaying top results.</p>
+        </aside>
+        <main id="content">
+            <!-- Buildings injected here -->
+        </main>
+    </div>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

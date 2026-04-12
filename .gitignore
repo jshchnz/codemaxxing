@@ -9,3 +9,14 @@ build/
 .venv/
 venv/
 .claude/
+node_modules/
+mythology-website/
+\nsrc/
+src/
+src/
+node_modules/
+line_count.txt
+file_count.txt
+verification_results.txt
+generate_elearning_platform.py
+src/urban_agriculture/
