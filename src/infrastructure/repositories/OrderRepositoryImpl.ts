@@ -1,89 +1,44 @@
 /**
- * ============================================================================
- * ENTERPRISE CRYPTO TRADING AND INVESTMENT SIMULATOR ADVANCED SYSTEM
- * ============================================================================
+ * @file Orderinfrastructure_repositories.ts
+ * @description Enterprise-grade implementation for Order in the infrastructure/repositories layer.
+ * This component is part of the ethical fashion, sustainable, and recycled materials e-commerce platform.
+ * It strictly adheres to Extreme Clean Architecture principles, ensuring decoupling,
+ * testability, and high cohesion. The sustainable fashion industry requires robust,
+ * scalable, and maintainable software to empower creators and consumers alike.
  *
- * File: OrderRepositoryImpl.ts
- * Description: Infrastructure implementation for Order repository
- *
- * Architecture Layer: EXTREME CLEAN ARCHITECTURE
- *
- * This file is part of the enterprise-grade, highly scalable, ultra-secure
- * crypto trading simulator. It follows strict object-oriented design patterns,
- * SOLID principles, and extreme clean architecture separation of concerns.
- *
- * Design Patterns Applied:
- * - Abstract Factory Pattern
- * - Singleton Pattern
- * - Strategy Pattern
- * - Observer Pattern
- * - Dependency Injection Pattern
- *
- * SECURITY NOTICE:
- * This component handles sensitive financial simulator data. Ensure all
- * inputs are sanitized and outputs are properly encoded. All operations
- * must be logged to the AuditLog system for compliance with regulatory
- * simulation requirements.
- *
- * ============================================================================
- * Copyright (c) 2023 Enterprise Crypto Simulators Inc. All rights reserved.
- * ============================================================================
+ * @author Enterprise Sustainable Architecture Team
+ * @version 1.0.0
+ * @since 2023-10-27
  */
 
-import { IOrderRepository } from '../../domain/repositories/IOrderRepository.js';
-import { IOrderModel } from '../../domain/models/OrderModel.js';
+import { IOrderRepository } from '../../domain/repositories/IOrderRepository';
+import { IOrder } from '../../domain/models/Order';
 
 /**
- * Enterprise implementation of IOrderRepository.
- * Uses a complex abstract strategy pattern for data access.
+ * Concrete implementation of IOrderRepository using abstract infrastructure.
  */
 export class OrderRepositoryImpl implements IOrderRepository {
+    private storage: Map<string, IOrder> = new Map();
 
-    /**
-     * Internal storage array representing a database table
-     */
-    private storage: IOrderModel[] = [];
-
-    /**
-     * Finds entity by ID
-     */
-    public async findById(id: string): Promise<IOrderModel | null> {
-        const entity = this.storage.find(e => e.id === id);
-        return entity || null;
+    public async findById(id: string): Promise<IOrder | null> {
+        return this.storage.get(id) || null;
     }
 
-    /**
-     * Finds all entities
-     */
-    public async findAll(): Promise<IOrderModel[]> {
-        return [...this.storage];
+    public async findAll(): Promise<IOrder[]> {
+        return Array.from(this.storage.values());
     }
 
-    /**
-     * Saves entity
-     */
-    public async save(entity: IOrderModel): Promise<IOrderModel> {
-        this.storage.push(entity);
-        return entity;
+    public async save(entity: IOrder): Promise<void> {
+        this.storage.set(entity.getId(), entity);
     }
 
-    /**
-     * Updates entity
-     */
-    public async update(entity: IOrderModel): Promise<IOrderModel> {
-        const index = this.storage.findIndex(e => e.id === entity.id);
-        if (index !== -1) {
-            this.storage[index] = entity;
-        }
-        return entity;
+    public async delete(id: string): Promise<void> {
+        this.storage.delete(id);
     }
-
-    /**
-     * Deletes entity
-     */
-    public async delete(id: string): Promise<boolean> {
-        const initialLength = this.storage.length;
-        this.storage = this.storage.filter(e => e.id !== id);
-        return this.storage.length < initialLength;
+    public async findByEthicalCriteria(criteria: any): Promise<IOrder[]> {
+        return Array.from(this.storage.values());
+    }
+    public async countSustainableItems(): Promise<number> {
+        return this.storage.size;
     }
 }

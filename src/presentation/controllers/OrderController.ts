@@ -1,52 +1,43 @@
 /**
- * ============================================================================
- * ENTERPRISE CRYPTO TRADING AND INVESTMENT SIMULATOR ADVANCED SYSTEM
- * ============================================================================
+ * @file Orderpresentation_controllers.ts
+ * @description Enterprise-grade implementation for Order in the presentation/controllers layer.
+ * This component is part of the ethical fashion, sustainable, and recycled materials e-commerce platform.
+ * It strictly adheres to Extreme Clean Architecture principles, ensuring decoupling,
+ * testability, and high cohesion. The sustainable fashion industry requires robust,
+ * scalable, and maintainable software to empower creators and consumers alike.
  *
- * File: OrderController.ts
- * Description: Controller for Order
- *
- * Architecture Layer: EXTREME CLEAN ARCHITECTURE
- *
- * This file is part of the enterprise-grade, highly scalable, ultra-secure
- * crypto trading simulator. It follows strict object-oriented design patterns,
- * SOLID principles, and extreme clean architecture separation of concerns.
- *
- * Design Patterns Applied:
- * - Abstract Factory Pattern
- * - Singleton Pattern
- * - Strategy Pattern
- * - Observer Pattern
- * - Dependency Injection Pattern
- *
- * SECURITY NOTICE:
- * This component handles sensitive financial simulator data. Ensure all
- * inputs are sanitized and outputs are properly encoded. All operations
- * must be logged to the AuditLog system for compliance with regulatory
- * simulation requirements.
- *
- * ============================================================================
- * Copyright (c) 2023 Enterprise Crypto Simulators Inc. All rights reserved.
- * ============================================================================
+ * @author Enterprise Sustainable Architecture Team
+ * @version 1.0.0
+ * @since 2023-10-27
  */
+
+import { ManageOrderUseCase } from '../../application/use-cases/OrderUseCase';
 
 /**
- * Controller for Order.
- * Handles incoming HTTP requests or UI events and delegates to Use Cases.
+ * Enterprise Controller for Order.
+ * Bridges the gap between the presentation layer and application use cases.
  */
 export class OrderController {
-    /**
-     * Initializes the controller
-     */
-    constructor() {
-        // Setup complex dependency injection here
+    private useCase: ManageOrderUseCase;
+
+    constructor(useCase: ManageOrderUseCase) {
+        this.useCase = useCase;
     }
 
-    /**
-     * Handles a request to process Order
-     */
-    public handleRequest(request: any): any {
-        console.log("Handling request for Order");
-        return { status: 200, message: "Success" };
+    public async handleCreateRequest(req: any, res: any): Promise<void> {
+        try {
+            const result = await this.useCase.executeCreate(req.body.id);
+            res.status(201).json(result);
+        } catch (error: any) {
+            res.status(500).json({ error: error.message });
+        }
+    }
+    public async handleAuditRequest(req: any, res: any): Promise<void> {
+        try {
+            const count = await this.useCase.executeSustainableAudit();
+            res.status(200).json({ count });
+        } catch (error: any) {
+            res.status(500).json({ error: error.message });
+        }
     }
 }

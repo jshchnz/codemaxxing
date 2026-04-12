@@ -1,73 +1,27 @@
 /**
- * ============================================================================
- * ENTERPRISE CRYPTO TRADING AND INVESTMENT SIMULATOR ADVANCED SYSTEM
- * ============================================================================
+ * @file Orderdomain_repositories.ts
+ * @description Enterprise-grade implementation for Order in the domain/repositories layer.
+ * This component is part of the ethical fashion, sustainable, and recycled materials e-commerce platform.
+ * It strictly adheres to Extreme Clean Architecture principles, ensuring decoupling,
+ * testability, and high cohesion. The sustainable fashion industry requires robust,
+ * scalable, and maintainable software to empower creators and consumers alike.
  *
- * File: IOrderRepository.ts
- * Description: Repository interface for Order
- *
- * Architecture Layer: EXTREME CLEAN ARCHITECTURE
- *
- * This file is part of the enterprise-grade, highly scalable, ultra-secure
- * crypto trading simulator. It follows strict object-oriented design patterns,
- * SOLID principles, and extreme clean architecture separation of concerns.
- *
- * Design Patterns Applied:
- * - Abstract Factory Pattern
- * - Singleton Pattern
- * - Strategy Pattern
- * - Observer Pattern
- * - Dependency Injection Pattern
- *
- * SECURITY NOTICE:
- * This component handles sensitive financial simulator data. Ensure all
- * inputs are sanitized and outputs are properly encoded. All operations
- * must be logged to the AuditLog system for compliance with regulatory
- * simulation requirements.
- *
- * ============================================================================
- * Copyright (c) 2023 Enterprise Crypto Simulators Inc. All rights reserved.
- * ============================================================================
+ * @author Enterprise Sustainable Architecture Team
+ * @version 1.0.0
+ * @since 2023-10-27
  */
 
-import { IOrderModel } from '../models/OrderModel.js';
+import { IOrder } from '../models/Order';
 
 /**
- * Enterprise Repository Interface for Order.
- * Defines the contract for data access operations related to Order.
+ * Repository interface for Order.
+ * Follows the Repository pattern to abstract data access.
  */
 export interface IOrderRepository {
-    /**
-     * Retrieves a Order by its unique identifier.
-     * @param {string} id - The ID of the Order
-     * @returns {Promise<IOrderModel | null>} The Order or null if not found
-     */
-    findById(id: string): Promise<IOrderModel | null>;
-
-    /**
-     * Retrieves all Order entities.
-     * @returns {Promise<IOrderModel[]>} An array of Order entities
-     */
-    findAll(): Promise<IOrderModel[]>;
-
-    /**
-     * Saves a Order entity to the repository.
-     * @param {IOrderModel} entity - The Order to save
-     * @returns {Promise<IOrderModel>} The saved Order
-     */
-    save(entity: IOrderModel): Promise<IOrderModel>;
-
-    /**
-     * Updates an existing Order entity.
-     * @param {IOrderModel} entity - The Order to update
-     * @returns {Promise<IOrderModel>} The updated Order
-     */
-    update(entity: IOrderModel): Promise<IOrderModel>;
-
-    /**
-     * Deletes a Order by its ID.
-     * @param {string} id - The ID to delete
-     * @returns {Promise<boolean>} True if deleted, false otherwise
-     */
-    delete(id: string): Promise<boolean>;
+    findById(id: string): Promise<IOrder | null>;
+    findAll(): Promise<IOrder[]>;
+    save(entity: IOrder): Promise<void>;
+    delete(id: string): Promise<void>;
+    findByEthicalCriteria(criteria: any): Promise<IOrder[]>;
+    countSustainableItems(): Promise<number>;
 }
