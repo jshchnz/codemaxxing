@@ -10,6 +10,9 @@ build/
 venv/
 .claude/
 node_modules/
+\nsrc/
+src/
+src/
 node_modules/
 line_count.txt
 file_count.txt
