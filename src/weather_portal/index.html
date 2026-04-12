@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Enterprise Real-Time Extreme Weather Portal</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+    <div id='app'>
+        <header class='app-header'>
+            <h1>Meteorological Extreme Event Analyzer</h1>
+            <div class='controls'>
+                <input type='text' id='searchInput' placeholder='Search by region or event ID...'>
+                <select id='filterSelect'>
+                    <option value='all'>All Events</option>
+                    <option value='Hurricane'>Hurricanes</option>
+                    <option value='Tornado'>Tornadoes</option>
+                    <option value='Blizzard'>Blizzards</option>
+                    <option value='Heatwave'>Heatwaves</option>
+                    <option value='Flood'>Floods</option>
+                </select>
+                <button id='searchBtn'>Search</button>
+            </div>
+            <div id='realTimeStats' class='real-time-stats'>
+                Loading real-time feeds...
+            </div>
+        </header>
+        <main id='eventGrid' class='event-grid'></main>
+        <footer class='app-footer'>
+            <p>Global Meteorological Monitoring Enterprise &copy; 2024</p>
+        </footer>
+    </div>
+    <script src='data.js'></script>
+    <script src='app.js'></script>
+</body>
+</html>
