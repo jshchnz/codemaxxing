@@ -10,3 +10,4 @@ build/
 venv/
 .claude/
 node_modules/
+mythology-website/
