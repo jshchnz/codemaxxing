@@ -11,3 +11,7 @@ venv/
 .claude/
 node_modules/
 node_modules/
+line_count.txt
+file_count.txt
+verification_results.txt
+generate_elearning_platform.py

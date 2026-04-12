@@ -1,58 +1,8 @@
-/**
- * ============================================================================
- * ENTERPRISE CRYPTO TRADING AND INVESTMENT SIMULATOR ADVANCED SYSTEM
- * ============================================================================
- *
- * File: NotificationController.ts
- * Description: Controller for Notification
- *
- * Architecture Layer: EXTREME CLEAN ARCHITECTURE
- *
- * This file is part of the enterprise-grade, highly scalable, ultra-secure
- * crypto trading simulator. It follows strict object-oriented design patterns,
- * SOLID principles, and extreme clean architecture separation of concerns.
- *
- * Design Patterns Applied:
- * - Abstract Factory Pattern
- * - Singleton Pattern
- * - Strategy Pattern
- * - Observer Pattern
- * - Dependency Injection Pattern
- *
- * SECURITY NOTICE:
- * This component handles sensitive financial simulator data. Ensure all
- * inputs are sanitized and outputs are properly encoded. All operations
- * must be logged to the AuditLog system for compliance with regulatory
- * simulation requirements.
- *
- * ============================================================================
- * Copyright (c) 2023 Enterprise Crypto Simulators Inc. All rights reserved.
- * ============================================================================
- */
+// File: src/infrastructure/repositories/SubscriptionPlanRepository.ts
+import { ISubscriptionPlan, SubscriptionPlanImpl } from '../../domain/models/ISubscriptionPlan';
 
 /**
- * Controller for Notification.
- * Handles incoming HTTP requests or UI events and delegates to Use Cases.
- */
-export class NotificationController {
-    /**
-     * Initializes the controller
-     */
-    constructor() {
-        // Setup complex dependency injection here
-    }
-
-    /**
-     * Handles a request to process Notification
-     */
-    public handleRequest(request: any): any {
-        console.log("Handling request for Notification");
-        return { status: 200, message: "Success" };
-// File: src/presentation/controllers/NotificationController.ts
-import { IManageNotificationUseCase, ManageNotificationUseCaseImpl } from '../../application/use-cases/ManageNotificationUseCase';
-
-/**
- * Controller Interface for Notification
+ * Repository Interface for SubscriptionPlan
  * Enterprise architecture comment block line 0 for maximum clarity.
  * Enterprise architecture comment block line 1 for maximum clarity.
  * Enterprise architecture comment block line 2 for maximum clarity.
@@ -74,13 +24,15 @@ import { IManageNotificationUseCase, ManageNotificationUseCaseImpl } from '../..
  * Enterprise architecture comment block line 18 for maximum clarity.
  * Enterprise architecture comment block line 19 for maximum clarity.
  */
-export interface INotificationController {
-    handleCreateRequest(req: any, res: any): Promise<void>;
-    handleGetRequest(req: any, res: any): Promise<void>;
+export interface ISubscriptionPlanRepository {
+    save(entity: ISubscriptionPlan): Promise<void>;
+    findById(id: string): Promise<ISubscriptionPlan | null>;
+    findAll(): Promise<ISubscriptionPlan[]>;
+    deleteById(id: string): Promise<void>;
 }
 
 /**
- * Abstract Controller for Notification
+ * Abstract Repository Base for SubscriptionPlan
  * Enterprise architecture comment block line 0 for maximum clarity.
  * Enterprise architecture comment block line 1 for maximum clarity.
  * Enterprise architecture comment block line 2 for maximum clarity.
@@ -102,17 +54,15 @@ export interface INotificationController {
  * Enterprise architecture comment block line 18 for maximum clarity.
  * Enterprise architecture comment block line 19 for maximum clarity.
  */
-export abstract class AbstractNotificationController implements INotificationController {
-    protected useCase: IManageNotificationUseCase;
-    constructor(useCase: IManageNotificationUseCase) {
-        this.useCase = useCase;
-    }
-    abstract handleCreateRequest(req: any, res: any): Promise<void>;
-    abstract handleGetRequest(req: any, res: any): Promise<void>;
+export abstract class AbstractSubscriptionPlanRepository implements ISubscriptionPlanRepository {
+    abstract save(entity: ISubscriptionPlan): Promise<void>;
+    abstract findById(id: string): Promise<ISubscriptionPlan | null>;
+    abstract findAll(): Promise<ISubscriptionPlan[]>;
+    abstract deleteById(id: string): Promise<void>;
 }
 
 /**
- * Concrete Controller for Notification
+ * In-Memory Repository for SubscriptionPlan
  * Enterprise architecture comment block line 0 for maximum clarity.
  * Enterprise architecture comment block line 1 for maximum clarity.
  * Enterprise architecture comment block line 2 for maximum clarity.
@@ -134,9 +84,10 @@ export abstract class AbstractNotificationController implements INotificationCon
  * Enterprise architecture comment block line 18 for maximum clarity.
  * Enterprise architecture comment block line 19 for maximum clarity.
  */
-export class NotificationControllerImpl extends AbstractNotificationController {
+export class InMemorySubscriptionPlanRepository extends AbstractSubscriptionPlanRepository {
+    private storage: Map<string, ISubscriptionPlan> = new Map();
 /**
- * Handle Create Request
+ * Save entity to storage
  * Enterprise architecture comment block line 0 for maximum clarity.
  * Enterprise architecture comment block line 1 for maximum clarity.
  * Enterprise architecture comment block line 2 for maximum clarity.
@@ -147,22 +98,12 @@ export class NotificationControllerImpl extends AbstractNotificationController {
  * Enterprise architecture comment block line 7 for maximum clarity.
  * Enterprise architecture comment block line 8 for maximum clarity.
  * Enterprise architecture comment block line 9 for maximum clarity.
- * Enterprise architecture comment block line 10 for maximum clarity.
- * Enterprise architecture comment block line 11 for maximum clarity.
- * Enterprise architecture comment block line 12 for maximum clarity.
- * Enterprise architecture comment block line 13 for maximum clarity.
- * Enterprise architecture comment block line 14 for maximum clarity.
  */
-    public async handleCreateRequest(req: any, res: any): Promise<void> {
-        try {
-            const result = await this.useCase.executeCreate(req.body || {});
-            res.status(201).json(result);
-        } catch (error) {
-            res.status(500).json({ error: 'Internal Server Error' });
-        }
+    public async save(entity: ISubscriptionPlan): Promise<void> {
+        this.storage.set(entity.id, entity);
     }
 /**
- * Handle Get Request
+ * Find entity by id
  * Enterprise architecture comment block line 0 for maximum clarity.
  * Enterprise architecture comment block line 1 for maximum clarity.
  * Enterprise architecture comment block line 2 for maximum clarity.
@@ -173,19 +114,40 @@ export class NotificationControllerImpl extends AbstractNotificationController {
  * Enterprise architecture comment block line 7 for maximum clarity.
  * Enterprise architecture comment block line 8 for maximum clarity.
  * Enterprise architecture comment block line 9 for maximum clarity.
- * Enterprise architecture comment block line 10 for maximum clarity.
- * Enterprise architecture comment block line 11 for maximum clarity.
- * Enterprise architecture comment block line 12 for maximum clarity.
- * Enterprise architecture comment block line 13 for maximum clarity.
- * Enterprise architecture comment block line 14 for maximum clarity.
  */
-    public async handleGetRequest(req: any, res: any): Promise<void> {
-        try {
-            const result = await this.useCase.executeRead(req.params.id);
-            if (result) res.status(200).json(result);
-            else res.status(404).json({ error: 'Not Found' });
-        } catch (error) {
-            res.status(500).json({ error: 'Internal Server Error' });
-        }
+    public async findById(id: string): Promise<ISubscriptionPlan | null> {
+        return this.storage.get(id) || null;
+    }
+/**
+ * Find all entities
+ * Enterprise architecture comment block line 0 for maximum clarity.
+ * Enterprise architecture comment block line 1 for maximum clarity.
+ * Enterprise architecture comment block line 2 for maximum clarity.
+ * Enterprise architecture comment block line 3 for maximum clarity.
+ * Enterprise architecture comment block line 4 for maximum clarity.
+ * Enterprise architecture comment block line 5 for maximum clarity.
+ * Enterprise architecture comment block line 6 for maximum clarity.
+ * Enterprise architecture comment block line 7 for maximum clarity.
+ * Enterprise architecture comment block line 8 for maximum clarity.
+ * Enterprise architecture comment block line 9 for maximum clarity.
+ */
+    public async findAll(): Promise<ISubscriptionPlan[]> {
+        return Array.from(this.storage.values());
+    }
+/**
+ * Delete entity by id
+ * Enterprise architecture comment block line 0 for maximum clarity.
+ * Enterprise architecture comment block line 1 for maximum clarity.
+ * Enterprise architecture comment block line 2 for maximum clarity.
+ * Enterprise architecture comment block line 3 for maximum clarity.
+ * Enterprise architecture comment block line 4 for maximum clarity.
+ * Enterprise architecture comment block line 5 for maximum clarity.
+ * Enterprise architecture comment block line 6 for maximum clarity.
+ * Enterprise architecture comment block line 7 for maximum clarity.
+ * Enterprise architecture comment block line 8 for maximum clarity.
+ * Enterprise architecture comment block line 9 for maximum clarity.
+ */
+    public async deleteById(id: string): Promise<void> {
+        this.storage.delete(id);
     }
 }
