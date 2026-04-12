@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Deep Sea Marine Biology Enterprise Catalog</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+    <div id='app'>
+        <header class='app-header'>
+            <h1>Abyssal Explorer: Deep Sea Catalog</h1>
+            <div class='controls'>
+                <input type='text' id='searchInput' placeholder='Search species or habitats...'>
+                <select id='filterSelect'>
+                    <option value='all'>All Entries</option>
+                    <option value='Species'>Species</option>
+                    <option value='Habitat'>Habitats</option>
+                    <option value='Submersible'>Submersibles</option>
+                </select>
+                <button id='searchBtn'>Search</button>
+            </div>
+        </header>
+        <main id='catalogGrid' class='catalog-grid'></main>
+        <footer class='app-footer'>
+            <p>Enterprise Scientific Data &copy; 2024</p>
+        </footer>
+    </div>
+    <script src='data.js'></script>
+    <script src='app.js'></script>
+</body>
+</html>
