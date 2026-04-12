@@ -10,3 +10,6 @@ build/
 venv/
 .claude/
 node_modules/
+\nsrc/
+src/
+src/
