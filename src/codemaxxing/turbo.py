@@ -1,3 +1,4 @@
+import json
 import os
 import subprocess
 import sys
@@ -94,3 +95,12 @@ def run_turbo(config: GenerationConfig):
         git_push(silent=False)
 
     print(stats.summary())
+
+    # Write session stats for incremental tracking
+    session_file = os.path.join(output_dir, ".session-stats.json")
+    with open(session_file, "w") as f:
+        json.dump({
+            "lines_generated": stats.total_lines,
+            "files_generated": stats.total_files,
+            "commits_generated": stats.total_commits,
+        }, f)
