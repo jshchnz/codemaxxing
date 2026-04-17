@@ -1,0 +1,18 @@
+[2026-04-12T07:59:10.121734] [INFO] Inizializzazione del sistema Enterprise RPS.
+[2026-04-12T07:59:10.122893] [INFO] Inizio della simulazione (3 turni).
+[2026-04-12T07:59:10.122945] [INFO] Inizio del turno.
+[2026-04-12T07:59:10.122996] [INFO] Giocatore 1 ha scelto Carta.
+[2026-04-12T07:59:10.123029] [INFO] Giocatore 2 ha scelto Forbici.
+[2026-04-12T07:59:10.123067] [INFO] Risultato: Forbici batte Carta. (Vincitore: Giocatore 2)
+[2026-04-12T07:59:10.123112] [INFO] Fine del turno.
+[2026-04-12T07:59:10.123144] [INFO] Inizio del turno.
+[2026-04-12T07:59:10.123179] [INFO] Giocatore 1 ha scelto Carta.
+[2026-04-12T07:59:10.123209] [INFO] Giocatore 2 ha scelto Carta.
+[2026-04-12T07:59:10.123240] [INFO] Risultato: Entrambi hanno scelto Carta. (Vincitore: Pareggio)
+[2026-04-12T07:59:10.123272] [INFO] Fine del turno.
+[2026-04-12T07:59:10.123302] [INFO] Inizio del turno.
+[2026-04-12T07:59:10.123335] [INFO] Giocatore 1 ha scelto Forbici.
+[2026-04-12T07:59:10.123365] [INFO] Giocatore 2 ha scelto Carta.
+[2026-04-12T07:59:10.123395] [INFO] Risultato: Forbici batte Carta. (Vincitore: Giocatore 1)
+[2026-04-12T07:59:10.123430] [INFO] Fine del turno.
+[2026-04-12T07:59:10.123469] [INFO] Termine della simulazione.

@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0
+rootdir: /app
+configfile: pyproject.toml
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+____________ ERROR collecting utils/string_slop/test_string_slop.py ____________
+ImportError while importing test module '/app/utils/string_slop/test_string_slop.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+utils/string_slop/test_string_slop.py:3: in <module>
+    from utils.string_slop.string_slop import *
+E   ModuleNotFoundError: No module named 'utils'
+=========================== short test summary info ============================
+ERROR utils/string_slop/test_string_slop.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.54s ===============================
