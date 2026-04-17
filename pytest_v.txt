@@ -1,0 +1,49 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/jules/.local/share/pipx/venvs/pytest/bin/python
+cachedir: .pytest_cache
+rootdir: /app
+configfile: pyproject.toml
+collecting ... collected 40 items
+
+utils/string_slop/test_string_slop.py::test_reverse_string PASSED        [  2%]
+utils/string_slop/test_string_slop.py::test_to_upper PASSED              [  5%]
+utils/string_slop/test_string_slop.py::test_to_lower PASSED              [  7%]
+utils/string_slop/test_string_slop.py::test_capitalize PASSED            [ 10%]
+utils/string_slop/test_string_slop.py::test_swap_case PASSED             [ 12%]
+utils/string_slop/test_string_slop.py::test_title_case PASSED            [ 15%]
+utils/string_slop/test_string_slop.py::test_trim_spaces PASSED           [ 17%]
+utils/string_slop/test_string_slop.py::test_trim_left PASSED             [ 20%]
+utils/string_slop/test_string_slop.py::test_trim_right PASSED            [ 22%]
+utils/string_slop/test_string_slop.py::test_remove_spaces PASSED         [ 25%]
+utils/string_slop/test_string_slop.py::test_to_snake_case PASSED         [ 27%]
+utils/string_slop/test_string_slop.py::test_to_camel_case PASSED         [ 30%]
+utils/string_slop/test_string_slop.py::test_mock_spongebob_case PASSED   [ 32%]
+utils/string_slop/test_string_slop.py::test_extract_vowels PASSED        [ 35%]
+utils/string_slop/test_string_slop.py::test_extract_consonants PASSED    [ 37%]
+utils/string_slop/test_string_slop.py::test_count_vowels PASSED          [ 40%]
+utils/string_slop/test_string_slop.py::test_count_consonants PASSED      [ 42%]
+utils/string_slop/test_string_slop.py::test_to_binary PASSED             [ 45%]
+utils/string_slop/test_string_slop.py::test_from_binary PASSED           [ 47%]
+utils/string_slop/test_string_slop.py::test_to_hex PASSED                [ 50%]
+utils/string_slop/test_string_slop.py::test_to_base64 PASSED             [ 52%]
+utils/string_slop/test_string_slop.py::test_rot13 PASSED                 [ 55%]
+utils/string_slop/test_string_slop.py::test_to_leet_speak PASSED         [ 57%]
+utils/string_slop/test_string_slop.py::test_reverse_words PASSED         [ 60%]
+utils/string_slop/test_string_slop.py::test_reverse_each_word PASSED     [ 62%]
+utils/string_slop/test_string_slop.py::test_is_palindrome PASSED         [ 65%]
+utils/string_slop/test_string_slop.py::test_remove_punctuation PASSED    [ 67%]
+utils/string_slop/test_string_slop.py::test_keep_only_alpha PASSED       [ 70%]
+utils/string_slop/test_string_slop.py::test_keep_only_digits PASSED      [ 72%]
+utils/string_slop/test_string_slop.py::test_shuffle_string PASSED        [ 75%]
+utils/string_slop/test_string_slop.py::test_sort_characters PASSED       [ 77%]
+utils/string_slop/test_string_slop.py::test_remove_duplicates PASSED     [ 80%]
+utils/string_slop/test_string_slop.py::test_count_words PASSED           [ 82%]
+utils/string_slop/test_string_slop.py::test_first_word PASSED            [ 85%]
+utils/string_slop/test_string_slop.py::test_last_word PASSED             [ 87%]
+utils/string_slop/test_string_slop.py::test_pad_left PASSED              [ 90%]
+utils/string_slop/test_string_slop.py::test_pad_right PASSED             [ 92%]
+utils/string_slop/test_string_slop.py::test_repeat_string PASSED         [ 95%]
+utils/string_slop/test_string_slop.py::test_add_exclamation PASSED       [ 97%]
+utils/string_slop/test_string_slop.py::test_add_question_mark PASSED     [100%]
+
+============================== 40 passed in 0.78s ==============================

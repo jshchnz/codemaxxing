@@ -1,0 +1,60 @@
+
+
+services:
+  auth-service:
+    build: ./auth-service
+    ports:
+      - "8001:8000"
+    environment:
+      - POSTGRES_URL=postgres://user:password@postgres:5432/db
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - postgres
+      - redis
+
+  task-service:
+    build: ./task-service
+    ports:
+      - "8002:8000"
+    environment:
+      - POSTGRES_URL=postgres://user:password@postgres:5432/db
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - postgres
+      - redis
+
+  notification-service:
+    build: ./notification-service
+    ports:
+      - "8003:8000"
+    environment:
+      - POSTGRES_URL=postgres://user:password@postgres:5432/db
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - postgres
+      - redis
+
+  user-profile-service:
+    build: ./user-profile-service
+    ports:
+      - "8004:8000"
+    environment:
+      - POSTGRES_URL=postgres://user:password@postgres:5432/db
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - postgres
+      - redis
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=db
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
