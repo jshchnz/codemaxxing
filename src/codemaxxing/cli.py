@@ -16,6 +16,12 @@ def main():
             "  codemaxxing --lines 1000 --enterprise\n"
             "  codemaxxing --turbo --forever --push-every 50 --batch-size 30\n"
             "  codemaxxing --turbo --forever --branch main --push-every 100\n"
+            "  codemaxxing --lines 25000 --lang rust --sanity 73\n"
+            "  codemaxxing --lines 25000 --lang csharp --sanity 88\n"
+            "  codemaxxing --lines 25000 --lang haskell --sanity 19\n"
+            "  codemaxxing --lines 25000 --lang cpp --sanity 94\n"
+            "  codemaxxing --lines 25000 --lang zig --sanity 82\n"
+            "  codemaxxing --lines 25000 --lang lua --sanity 23\n"
         ),
     )
 
@@ -30,7 +36,11 @@ def main():
     )
     parser.add_argument(
         "--lang", type=str, default="all",
-        choices=["all", "java", "python", "js", "javascript", "go", "generic"],
+        choices=[
+            "all", "java", "python", "js", "javascript", "go", "generic",
+            "rust", "csharp", "cs", "kotlin", "php", "ruby",
+            "haskell", "hs", "c", "cpp", "c++", "swift", "zig", "lua",
+        ],
         help="Target language(s) for generated slop (default: all)",
     )
     parser.add_argument(
