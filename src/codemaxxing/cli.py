@@ -16,6 +16,12 @@ def main():
             "  codemaxxing --lines 1000 --enterprise\n"
             "  codemaxxing --turbo --forever --push-every 50 --batch-size 30\n"
             "  codemaxxing --turbo --forever --branch main --push-every 100\n"
+            "  codemaxxing --lines 25000 --lang rust --sanity 73\n"
+            "  codemaxxing --lines 25000 --lang csharp --sanity 88\n"
+            "  codemaxxing --lines 25000 --lang haskell --sanity 19\n"
+            "  codemaxxing --lines 25000 --lang cpp --sanity 94\n"
+            "  codemaxxing --lines 25000 --lang zig --sanity 82\n"
+            "  codemaxxing --lines 25000 --lang lua --sanity 23\n"
         ),
     )
 
@@ -33,6 +39,12 @@ def main():
         choices=["all", "java", "python", "js", "javascript", "go", "generic"],
         help="Target language(s) for generated slop (default: all)",
     )
+    extra_langs = [
+        "rust", "csharp", "cs", "kotlin", "php", "ruby",
+        "haskell", "hs", "c", "cpp", "c++", "swift", "zig", "lua",
+    ]
+    lang_action = next(action for action in parser._actions if "--lang" in action.option_strings)
+    lang_action.choices = list(lang_action.choices) + extra_langs
     parser.add_argument(
         "--output", type=str, default="./output",
         help="Output directory (default: ./output)",

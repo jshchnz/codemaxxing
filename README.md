@@ -51,6 +51,15 @@ codemaxxing --lines 10000 --enterprise
 
 # Target specific languages
 codemaxxing --lines 5000 --lang java --sanity 80
+codemaxxing --lines 8000 --lang rust --sanity 73
+codemaxxing --lines 12000 --lang csharp --sanity 91
+codemaxxing --lines 15000 --lang kotlin --sanity 67
+codemaxxing --lines 9000 --lang haskell --sanity 12
+codemaxxing --lines 14000 --lang c --sanity 45
+codemaxxing --lines 14000 --lang cpp --sanity 89
+codemaxxing --lines 11000 --lang swift --sanity 76
+codemaxxing --lines 13000 --lang zig --sanity 84
+codemaxxing --lines 7000 --lang lua --sanity 20
 ```
 
 ## Features
@@ -68,6 +77,7 @@ Controls the chaos level of generated code:
 ### `--turbo`
 
 Enters a tight loop: generate files → `git add` → `git commit` → repeat.
+Every batch also refreshes a `codemaxxing_manifest.md` file so you can admire the blast radius in real time.
 
 Live stats display:
 ```
@@ -87,7 +97,20 @@ Generate slop in your favorite language:
 - **Python** — Metaclasses, abstract bases, 15-parameter constructors
 - **JavaScript/TypeScript** — Callback hell, promise chains to nowhere, type wrappers wrapping wrappers
 - **Go** — `interface{}` everywhere, `if err != nil { return nil, nil }` chains, goroutines sending to void
+- **Rust** — Traits, enums, phantom generic wrappers, metrics emitters, boxed-error bureaucracy
+- **C#** — Async orchestration layers, records, nested classes, enumerable telemetry floods
+- **Kotlin** — Gateway interfaces, lifecycle enums, cache-heavy result wrappers, data classes forever
+- **PHP** — Contracts, traits, mixed payloads, context arrays growing without bound
+- **Ruby** — Modules, attr_accessors, telemetry arrays, nested constant palaces
+- **Haskell** — Typeclasses, Maybe/Either choreography, algebraic data types, infinite-feeling pipelines
+- **C** — Structs, enum state machines, pointer-shaped bureaucracy, metric-printing main functions
+- **C++** — Virtual contracts, optional strings, vector telemetry payloads, nested structs for no reason
+- **Swift** — Protocol-oriented enterprise architecture, payload structs, telemetry arrays, lifecycle enums
+- **Zig** — Allocator ceremony, struct-heavy orchestration, tagged states, metrics arrays of pure intent
+- **Lua** — Metatable pseudo-classes, telemetry tables, stringly workflows, chainable chaos methods
 - **Generic** — Nested if/else 20 levels deep, wrapper functions calling wrapper functions, fake unit tests
+
+In `--lang all`, codemaxxing now guarantees every available language gets represented before total chaos takes over, including Haskell, C, C++, Swift, Zig, and Lua.
 
 ## Testimonials
 
