@@ -5,7 +5,8 @@ from collections import defaultdict
 
 from codemaxxing.config import GenerationConfig
 from codemaxxing.generators import get_generators
-from codemaxxing.generators.base import GeneratedFile, SlopGenerator
+from codemaxxing.generators.base import GeneratedFile
+from codemaxxing.generators.base import SlopGenerator
 
 
 def _generator_sequence(
@@ -36,10 +37,17 @@ def generate(config: GenerationConfig) -> list[GeneratedFile]:
     files: list[GeneratedFile] = []
     total_lines = 0
     file_index = 0
-    guaranteed = _generator_sequence(generators, len(generators))
 
-    while total_lines < config.lines or guaranteed:
-        gen = guaranteed.pop(0) if guaranteed else random.choice(generators)
+    if config.lang == "all":
+        guaranteed = _generator_sequence(generators, len(generators))
+        for gen in guaranteed:
+            result = gen.generate(config.sanity, file_index)
+            files.append(result)
+            total_lines += result.line_count
+            file_index += 1
+
+    while total_lines < config.lines:
+        gen = random.choice(generators)
         result = gen.generate(config.sanity, file_index)
         files.append(result)
         total_lines += result.line_count
@@ -51,9 +59,15 @@ def generate(config: GenerationConfig) -> list[GeneratedFile]:
 def generate_batch(config: GenerationConfig, batch_size: int, start_index: int) -> list[GeneratedFile]:
     generators = get_generators(config.lang)
     files: list[GeneratedFile] = []
-    sequence = _generator_sequence(generators, batch_size, start_index)
+    sequence: list[SlopGenerator] = []
 
-    for i, gen in enumerate(sequence):
+    if config.lang == "all":
+        sequence = _generator_sequence(generators, batch_size, start_index)
+
+    for i in range(batch_size):
+        gen = random.choice(generators)
+        if sequence:
+            gen = sequence[i]
         result = gen.generate(config.sanity, start_index + i)
         files.append(result)
 

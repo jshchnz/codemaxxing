@@ -36,13 +36,15 @@ def main():
     )
     parser.add_argument(
         "--lang", type=str, default="all",
-        choices=[
-            "all", "java", "python", "js", "javascript", "go", "generic",
-            "rust", "csharp", "cs", "kotlin", "php", "ruby",
-            "haskell", "hs", "c", "cpp", "c++", "swift", "zig", "lua",
-        ],
+        choices=["all", "java", "python", "js", "javascript", "go", "generic"],
         help="Target language(s) for generated slop (default: all)",
     )
+    extra_langs = [
+        "rust", "csharp", "cs", "kotlin", "php", "ruby",
+        "haskell", "hs", "c", "cpp", "c++", "swift", "zig", "lua",
+    ]
+    lang_action = next(action for action in parser._actions if "--lang" in action.option_strings)
+    lang_action.choices = list(lang_action.choices) + extra_langs
     parser.add_argument(
         "--output", type=str, default="./output",
         help="Output directory (default: ./output)",
